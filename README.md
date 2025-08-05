@@ -1,5 +1,31 @@
 # kickstart.nvim
+This is my nvim stuff. I basically stole this from this link/youtube video
+https://github.com/nvim-lua/kickstart.nvim/
+https://www.youtube.com/watch?v=m8C0Cq9Uv9o
 
+## Setup on dnf
+```
+cd
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.zshrc
+source ~/.zshrc
+echo "now run 'nvim' let it install, it will error, press enter till it stops"
+echo "then you need to run :Lazy and hit shift-u to install the lsp"
+nvim
+
+git clone https://github.com/castlez/nvim_config.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+nvim
+```
+
+## Keybinds
+```
+Leader key: Space
+Open file explorer: \
+```
+
+# Original README
 ## Introduction
 
 A starting point for Neovim that is:
